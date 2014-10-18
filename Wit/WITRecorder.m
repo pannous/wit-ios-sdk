@@ -138,7 +138,7 @@ static void MyPropertyListener(void *userData, AudioQueueRef queue, AudioQueuePr
     if (![self isRecording]) {
         return;
     }
-//    debug(@"Recorder: updating power");
+
     AudioQueueLevelMeterState meters[1];
     UInt32 dlen = sizeof(meters);
     int err;
@@ -148,6 +148,7 @@ static void MyPropertyListener(void *userData, AudioQueueRef queue, AudioQueuePr
         return;
     }
     self.power = meters[0].mAveragePower;
+//    debug(@"Recorder: updating power to %d ",self.power);
     [[NSNotificationCenter defaultCenter] postNotificationName:kWitNotificationAudioLevelChanged object:[NSNumber numberWithFloat:self.power]];
 }
 
