@@ -98,6 +98,12 @@
  */
 - (void)witDidStopRecording;
 
+
+/**
+ Called when microphone input amplitude changed while recording the audio
+ */
+- (void)microphoneLevelChanged:(float)toAmplitude;
+
 /**
  Called if no selector is found for received intent
  */

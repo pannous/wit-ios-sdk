@@ -132,6 +132,12 @@
         [self.delegate witDidStartRecording];
     }
 }
+- (void)audiochange:(NSNotification*)n {
+
+    if ([self.delegate respondsToSelector:@selector(microphoneLevelChanged)]) {
+        [self.delegate microphoneLevelChanged:[(NSNumber*)n.object floatValue]];
+    }
+}
 
 #pragma mark - WITUploaderDelegate
 - (void)gotResponse:(NSDictionary*)resp error:(NSError*)err {
@@ -263,6 +269,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioend:)
                                                  name:kWitNotificationAudioEnd object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audiochange:) name:kWitNotificationAudioLevelChanged object:nil];
 }
 
 - (void)dealloc {

@@ -119,7 +119,6 @@
 		2BB2248E17460BF400538704 /* WITMicButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITMicButton.m; sourceTree = "<group>"; };
 		2BE5B2BB197832BA00B67304 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		2BE5B2BC197832BA00B67304 /* util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = util.m; sourceTree = "<group>"; };
-		329F90C2BC4241B2A98122BB /* Pods-WitTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WitTests.xcconfig"; path = "Pods/Pods-WitTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		33496D2620B742B797668671 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7284A2A0BD494CE4BF1E6BF2 /* libPods-WitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95283DD15F4459300F1D5E0 /* WITUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITUploader.h; sourceTree = "<group>"; };
@@ -235,7 +234,6 @@
 				C5EC36EF17094E9200E0916B /* WitTests */,
 				B9C0164615DD327500C025BD /* Frameworks */,
 				B9C0164515DD327500C025BD /* Products */,
-				329F90C2BC4241B2A98122BB /* Pods-WitTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -790,7 +788,6 @@
 		};
 		C5EC36FC17094E9200E0916B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 329F90C2BC4241B2A98122BB /* Pods-WitTests.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -812,7 +809,6 @@
 		};
 		C5EC36FD17094E9200E0916B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 329F90C2BC4241B2A98122BB /* Pods-WitTests.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;

@@ -147,8 +147,8 @@ static void MyPropertyListener(void *userData, AudioQueueRef queue, AudioQueuePr
         debug(@"Error while reading meters %d", err);
         return;
     }
-
     self.power = meters[0].mAveragePower;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kWitNotificationAudioLevelChanged object:[NSNumber numberWithFloat:self.power]];
 }
 
 #pragma mark - Lifecycle
